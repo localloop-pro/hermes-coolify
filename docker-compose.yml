@@ -5,19 +5,8 @@ services:
     volumes:
       - hermes_data:/home/hermes/.hermes
     environment:
-      # ── LLM Provider (pick ONE) ──────────────────────
-      - OPENROUTER_API_KEY=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
-
-      # - ANTHROPIC_API_KEY=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
-      # - OPENAI_API_KEY=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
-      # - DEEPSEEK_API_KEY=sk-84097a00f4f84ea489c73cb67c066c65
-      # ── Messaging Platform (pick ONE) ────────────────
-      - TELEGRAM_BOT_TOKEN=8652693808:AAHtbNklWDPNJmsIevwYJwT6ZWlA3Pq-6CM
-      # - DISCORD_BOT_TOKEN=${DISCORD_BOT_TOKEN}
-      # - SLACK_BOT_TOKEN=${SLACK_BOT_TOKEN}
-
-      # ── Optional Tools438b5de0d  # web search
-      # - FAL_KEY=021cb269-7abf-40ef-ab7f-52b9b47d1953:b5d2adf3246c0fc7910596ff6a885573                      # image generation
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
 
 volumes:
   hermes_data:

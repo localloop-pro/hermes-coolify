@@ -21,5 +21,5 @@ ENV PATH="/home/hermes/.local/bin:$PATH"
 VOLUME ["/home/hermes/.hermes"]
 
 # Start the messaging gateway when container boots
-CMD ["hermes", "gateway", "start"]
+CMD ["hermes", "gateway", "run"]
 

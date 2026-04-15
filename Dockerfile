@@ -3,7 +3,7 @@ FROM ubuntu:24.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Install only git + curl — the Hermes installer handles everything else
-RUN apt-get update && apt-get install -y git curl bash && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y git curl bash xz-utils && rm -rf /var/lib/apt/lists/*
 
 # Create a non-root user called "hermes"
 RUN useradd -ms /bin/bash hermes

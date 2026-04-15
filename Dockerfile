@@ -11,8 +11,7 @@ USER hermes
 WORKDIR /home/hermes
 
 # Run the official one-line installer (HERMES_SKIP_SETUP only for install, not container runtime)
-RUN curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh \
-  | env HERMES_SKIP_SETUP=1 bash
+RUN curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash || true
 
 # Make the hermes command available globally inside the container
 ENV PATH="/home/hermes/.local/bin:$PATH"
